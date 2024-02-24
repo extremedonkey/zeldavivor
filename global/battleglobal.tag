@@ -1,29 +1,21 @@
-{require(You cannot battle this enemy. Either you are exhausted and have 0 HP, you not currently in that coordinate, or you are typing this command in the wrong place - type it in your subs!):<@&1208391402413621339>}
-{=(COMMENT): 
 
-1191083974823514194
-                     __                 __   
-  ____  ____   _____/  |_  ____   _____/  |_ 
-_/ ___\/  _ \ /    \   __\/ __ \ /    \   __\
-\  \__(  <_> )   |  \  | \  ___/|   |  \  |  
- \___  >____/|___|  /__|  \___  >___|  /__|  
-     \/           \/          \/     \/      
-}
-
-
-{=(COMMENT): Battle Setup - Only thing that should change per 'encounter' - Enemy and Rupees}
-{=(debugMode):disabled}
-{=(eName):Leever}{var(eHP):3}{var(eAtt):1}{=(e):<:leever:1208253003111338044> **{eName}**}
-{=(eDesc):You are fighting a Leever, a sand-dwelling creature known for its burrowing capability. It notices you, and starts barreling toward you at breakneck speed making an ominous rocking sound.}
-{=(rupeeBounty):7}
-
+{=(COMMENT): Reece made changes to all the things!}
 {=(COMMENT): EVERYTHING BELOW HERE SHOULD STAY THE SAME ACROSS ALL ENEMY BATTLES}
 {=(p):<:linkicon:1205758475867783238> **{user}**}{=(s):<:sword:1205825920863174666>}{=(ru):<:rupee:1205860341666545765>}{=(r):<:rupee:1205860341666545765>{rupeeBounty}}{=(fh):<:fh:1205968720342548481>}{=(eh):<:eh:1205968718669291611>}{=(space):⠀
 > }{=(eH):{fh}{fh}{fh}}
 
 {=(COMMENT): Player Attack, Damage, currentHP, MaxHP calculations at the start of the battle}
 {=(pAtt):2}
-{=(hasShield):1201853062411730995}{=(baseHP):1201782450565419038}{=(hasBaseHP):{if({contains({baseHP}):{user(roleids)}}==true): true|false}}{=(hasHylianShield):{if({contains({hasShield}):{user(roleids)}}==true): true|false}}{=(maxHP):{m:trunc({if({hasBaseHP}==true):5|0}{if({hasHylianShield}==true):+3|+0})}}
+{=(dShield):1208848371843072071}
+{=(hShield):1201853062411730995}
+
+{=(baseHP):1201782450565419038}
+{=(hasBaseHP):{if({contains({baseHP}):{user(roleids)}}==true): true|false}}
+{=(hasDekuShield):{if({contains({dShield}):{user(roleids)}}==true): true|false}}
+{=(hasHylianShield):{if({contains({hShield}):{user(roleids)}}==true): true|false}}
+
+{=(maxHP):{m:trunc({if({hasBaseHP}==true):5|0}{if({hasHylianShield}==true):+3|+0}{if({hasDekuShield}==true):+1|+0})}}
+
 
 {=(COMMENT):Damage roles, each role represents 1 dmgbit of information in a 16 dmgbit binary digit}
 {silence}
