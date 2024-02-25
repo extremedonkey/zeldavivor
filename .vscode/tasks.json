@@ -14,7 +14,7 @@
         "clear": true
     },
     "group": {
-        "kind": "build",
         "isDefault": true
-    }
+    },
+    "problemMatcher": []
 }
