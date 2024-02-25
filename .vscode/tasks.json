@@ -1,0 +1,20 @@
+{
+    "label": "Run update_battles.bat",
+    "type": "shell",
+    "command": "./update_battles.bat",
+    "args": [
+        // add any arguments for the batch file here
+    ],
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    }
+}
