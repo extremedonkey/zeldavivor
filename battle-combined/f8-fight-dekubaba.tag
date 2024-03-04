@@ -1,11 +1,11 @@
 {require(You cannot battle this enemy. Either you are exhausted and have 0 HP, you not currently in that coordinate, or you are typing this command in the wrong place - type it in your subs!):<@&1208391402413621339>}
 {=(COMMENT): Battle Setup - Only thing that should change per 'encounter' - Enemy and Rupees}
 {=(debugMode):disabled}
-{=(eName):Octorok}{var(eHP):2}{var(eAtt):2}{=(e):<:octorok:1205817242353270835> **{eName}**}
-{=(eDesc):You are fighting an Octorok, a water-dwelling creature that shoots rock projectiles from its cylindrical snout in short intervals. When approached, Octoroks will immediately submerge underwater to avoid harm.
-
-It spots you from the distance, emerging out of the water and gazing at you intensely...}
-{=(rupeeBounty):8}
+{=(eName):Withered Deku Baba}{var(eHP):1}{var(eAtt):1}{=(e):<:DekuBaba:1211188275130404864> **{eName}**}
+{=(eDesc):You are fighting a withered Deku Baba. This is a fairly weak carnivorous plant that you don't want to get near!}
+{=(rupeeBounty):2}
+{=(winMessage):## 🔪You slayed that Deku Baba!
+There's a small log hollowed out with a space just big enough to crawl through directly below where the deku baba was. Type **?f8-crawl-log** to continue.}
 {=(COMMENT): ========= GLOBAL FILE CONTENT BELOW - battleglobal.tag! ========= }
 {=(COMMENT): EVERYTHING BELOW HERE SHOULD STAY THE SAME ACROSS ALL ENEMY BATTLES}
 {=(p):<:linkicon:1205758475867783238> **{user}**}{=(s):<:sword:1205825920863174666>}{=(ru):<:rupee:1205860341666545765>}{=(r):<:rupee:1205860341666545765>{rupeeBounty}}{=(fh):<:fh:1205968720342548481>}{=(eh):<:eh:1205968718669291611>}{=(space):⠀

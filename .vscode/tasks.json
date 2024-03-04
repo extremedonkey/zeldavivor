@@ -1,5 +1,6 @@
 {
-    "label": "Run update_battles.bat",
+    "version": "2.0.0",
+    "label": "UpdateBattles",
     "type": "shell",
     "command": "./update_battles.bat",
     "args": [

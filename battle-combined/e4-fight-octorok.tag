@@ -12,12 +12,16 @@ It spots you from the distance, emerging out of the water and gazing at you inte
 > }{=(eH):{fh}{fh}{fh}}
 
 {=(COMMENT): Player Attack, Damage, currentHP, MaxHP calculations at the start of the battle}
-{=(pAtt):2}
+
 {=(dShield):1208848371843072071}{=(hShield):1201853062411730995}{=(baseHP):1201782450565419038}
 
+{=(kSword):1211287524350230608}
+{=(hasKSword):{if({contains({kSword}):{user(roleids)}}==true): true|false}}
 {=(hasBaseHP):{if({contains({baseHP}):{user(roleids)}}==true): true|false}}
 {=(hasDekuShield):{if({contains({dShield}):{user(roleids)}}==true): true|false}}
 {=(hasHylianShield):{if({contains({hShield}):{user(roleids)}}==true): true|false}}
+
+{=(pAtt):{m:trunc(2+{if({hasKSword}==true):+1|+0})}}
 
 {=(maxHP):{m:trunc({if({hasBaseHP}==true):5|0}{if({hasHylianShield}==true):+3|+0}{if({hasDekuShield}==true):+1|+0})}}
 
@@ -27,8 +31,7 @@ It spots you from the distance, emerging out of the water and gazing at you inte
 {=(uids):{target(roleids)}}
 {=(dr.0):1206484741092548609}{=(dr.1):1206484810848010240}{=(dr.2):1206484830657843260}{=(dr.3):1206484850064891915}{=(dr.4):1206484869446893578}{=(dr.5):1206484891844354110}
 
-{=(m.0):{if({in({dr.0}):{uids}}==true):(1*2^0)|0}}
-{=(m.1):{if({in({dr.1}):{uids}}==true):(1*2^1)|0}}
+{=(m.0):{if({in({dr.0}):{uids}}==true):(1*2^0)|0}}{=(m.1):{if({in({dr.1}):{uids}}==true):(1*2^1)|0}}
 {=(m.2):{if({in({dr.2}):{uids}}==true):(1*2^2)|0}}
 {=(m.3):{if({in({dr.3}):{uids}}==true):(1*2^3)|0}}
 {=(m.4):{if({in({dr.4}):{uids}}==true):(1*2^4)|0}}
@@ -275,17 +278,10 @@ _/ __ \ /     \| __ \_/ __ \ / __ |
 
 ==============================================
 > {eDesc}{if({a1TKO}==true):## Attack 1{space}Both {p} and {e} leap toward each other, knocking each other out at the exact same time! It's a **double knock-out!**}
-{all({a1chk(1)}==0|{a1chk(2)}>=1):## Attack 1{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a1chk(2)} HP remaining. {e} dropped {r} Rupees!}
-{all({a1chk(2)}==0|{a1chk(1)}>=1):## Attack 1{space}{e} struck the final blow to {p}, {e} has {a1chk(1)}HP remaining.}
-{all({a1chk(1)}>=1|{a1chk(2)}>=1):## Attack 1{space}{p} did {pAtt} attack to {e}, leaving it with {a1chk(1)} HP.
+{all({a1chk(1)}==0|{a1chk(2)}>=1):## Attack 1{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a1chk(2)} HP remaining. {e} dropped {r} Rupees!}{all({a1chk(2)}==0|{a1chk(1)}>=1):## Attack 1{space}{e} struck the final blow to {p}, {e} has {a1chk(1)}HP remaining.}{all({a1chk(1)}>=1|{a1chk(2)}>=1):## Attack 1{space}{p} did {pAtt} attack to {e}, leaving it with {a1chk(1)} HP.
 > {e} did {eAtt} attack to {p}, leaving {p} with {a1chk(2)} HP.}
 {if({a2TKO}==true):## Attack 2{space}Both {p} and {e} leap toward each other, knocking each other out at the exact same time! **It's a double knock-out!**}
-{all({a2chk(1)}==0|{a2chk(2)}>=1|{a1chk(1)}!=0):## Attack 2{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a2chk(2)} HP remaining. {e} dropped {r} Rupees!}
-{all({a2chk(2)}==0|{a2chk(1)}>=1|{a1chk(2)}!=0):## Attack 2{space}{e} struck the final blow to {p}, {e} has {a2chk(1)}HP remaining.}
-{all({a2chk(1)}>=1|{a2chk(2)}>=1):## Attack 2{space}{p} did {pAtt} attack to {e}, leaving it with {a2chk(1)} HP.
+{all({a2chk(1)}==0|{a2chk(2)}>=1|{a1chk(1)}!=0):## Attack 2{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a2chk(2)} HP remaining. {e} dropped {r} Rupees!}{all({a2chk(2)}==0|{a2chk(1)}>=1|{a1chk(2)}!=0):## Attack 2{space}{e} struck the final blow to {p}, {e} has {a2chk(1)}HP remaining.}{all({a2chk(1)}>=1|{a2chk(2)}>=1):## Attack 2{space}{p} did {pAtt} attack to {e}, leaving it with {a2chk(1)} HP.
 > {e} did {eAtt} attack to {p}, leaving {p} with {a2chk(2)} HP.}
 {if({a3TKO}==true):## Attack 3{space}Both {p} and {e} leap toward each other, knocking each other out at the exact same time! **It's a double knock-out!**}
-{all({a3chk(1)}==0|{a3chk(2)}>=1|{a2chk(1)}!=0):## Attack 3{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a3chk(2)} HP remaining. {e} dropped {r} Rupees!}
-{all({a3chk(2)}==0|{a3chk(1)}>=1|{a2chk(2)}!=0):## Attack 3{space}{e} struck the final blow to {p}, {e} has {a3chk(1)}HP remaining.}
-{all({a3chk(1)}>=1|{a3chk(2)}>=1):## Attack 3{space}{p} did {pAtt} attack to {e}, leaving it with {a3chk(1)} HP.
-> {e} did {eAtt} attack to {p}, leaving {p} with {a3chk(2)} HP.}
+{all({a3chk(1)}==0|{a3chk(2)}>=1|{a2chk(1)}!=0):## Attack 3{space}{p} dealt a finishing blow to {e} with {pAtt} attack, {p} has {a3chk(2)} HP remaining. {e} dropped {r} Rupees!}{all({a3chk(2)}==0|{a3chk(1)}>=1|{a2chk(2)}!=0):## Attack 3{space}{e} struck the final blow to {p}, {e} has {a3chk(1)}HP remaining.}{all({a3chk(1)}>=1|{a3chk(2)}>=1):## Attack 3{space}{p} did {pAtt} attack to {e}, leaving it with {a3chk(1)} HP. > {e} did {eAtt} attack to {p}, leaving {p} with {a3chk(2)} HP.}{if({didYouWinHP} >= 1):{winMessage}}
