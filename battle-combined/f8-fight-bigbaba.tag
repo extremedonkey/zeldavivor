@@ -1,23 +1,27 @@
+{=(COMMENT): Header v0.1 - Baselining with header global}
 {require(You cannot battle this enemy. Either you are exhausted and have 0 HP, you not currently in that coordinate, or you are typing this command in the wrong place - type it in your subs!):<@&1208391402413621339>}
-{=(COMMENT): Battle Setup - Only thing that should change per 'encounter' - Enemy and Rupees}
 {=(debugMode):disabled}
-{=(eName):Big Deku Baba}{var(eHP):1}{var(eAtt):1}{=(e):<:DekuBaba:1211188275130404864> **{eName}**}
+{=(eName):Big Deku Baba}{var(eHP):2}{var(eAtt):2}{=(e):<:DekuBaba:1211188275130404864> **{eName}**}
 {=(eDesc):You are fighting a Big Deku Baba. This one is is lunging toward you!}
 {=(rupeeBounty):5}
 {=(winMessage):## <:chest:1211230005640564796> The treasure is yours!
 
 The chest sits perched atop a chopped log, glimmering. Type **?f8-kokori-chest** to see what's inside. You can tell them where and how you found it, but you cannot tell other players this specific command.}
-{=(COMMENT): ========= GLOBAL FILE CONTENT BELOW - battleglobal.tag! ========= }
-{=(COMMENT): EVERYTHING BELOW HERE SHOULD STAY THE SAME ACROSS ALL ENEMY BATTLES}
+
+
+{=(COMMENT): === battleglobal.tag v0.1 - Adding initial version numbering system to track headers having been changed ===}
 {=(p):<:linkicon:1205758475867783238> **{user}**}{=(s):<:sword:1205825920863174666>}{=(ru):<:rupee:1205860341666545765>}{=(r):<:rupee:1205860341666545765>{rupeeBounty}}{=(fh):<:fh:1205968720342548481>}{=(eh):<:eh:1205968718669291611>}{=(space):⠀
 > }{=(eH):{fh}{fh}{fh}}
 
 {=(COMMENT): Player Attack, Damage, currentHP, MaxHP calculations at the start of the battle}
 
-{=(dShield):1208848371843072071}{=(hShield):1201853062411730995}{=(baseHP):1201782450565419038}
+{=(COMMENT): Todo consolidate below based on explore-g8.tag}
 
-{=(kSword):1211287524350230608}
+{=(dShield):1208848371843072071}{=(hShield):1201853062411730995}{=(baseHP):1201782450565419038}
+{=(kSword):1211287524350230608}{=(SShot):1214346856683937893}
+
 {=(hasKSword):{if({contains({kSword}):{user(roleids)}}==true): true|false}}
+{=(hasSShot):{if({contains({sShot}):{user(roleids)}}==true): true|false}}
 {=(hasBaseHP):{if({contains({baseHP}):{user(roleids)}}==true): true|false}}
 {=(hasDekuShield):{if({contains({dShield}):{user(roleids)}}==true): true|false}}
 {=(hasHylianShield):{if({contains({hShield}):{user(roleids)}}==true): true|false}}

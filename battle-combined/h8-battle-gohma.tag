@@ -1,11 +1,9 @@
 {=(COMMENT): Header v0.1 - Baselining with header global}
 {require(You cannot battle this enemy. Either you are exhausted and have 0 HP, you not currently in that coordinate, or you are typing this command in the wrong place - type it in your subs!):<@&1208391402413621339>}
 {=(debugMode):disabled}
-{=(eName):Octorok}{var(eHP):2}{var(eAtt):2}{=(e):<:octorok:1205817242353270835> **{eName}**}
-{=(eDesc):You are fighting an Octorok, a water-dwelling creature that shoots rock projectiles from its cylindrical snout in short intervals. When approached, Octoroks will immediately submerge underwater to avoid harm.
-
-It spots you from the distance, emerging out of the water and gazing at you intensely....}
-{=(rupeeBounty):8}
+{=(eName):Gohma}{var(eHP):5}{var(eAtt):2}{=(e):<:gohma:1216052531927711867> **{eName}**}
+{=(eDesc):You are fighting Gohma - the cause of the infection of The Great Deku Tree. She's dangerous, watch out...}
+{=(rupeeBounty):15}
 {=(winMessage):}
 
 {=(COMMENT): === battleglobal.tag v0.1 - Adding initial version numbering system to track headers having been changed ===}
