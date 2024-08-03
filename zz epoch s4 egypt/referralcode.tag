@@ -1,6 +1,8 @@
 {=(COMMENT):Generates a referral code based off a player's existing pyramid scheme (not their own)}
 
 
+
+
 {silent}
 {=(uids):{target(roleids)}}
 {=(reece.scheme):1217846428605485191}
@@ -32,6 +34,8 @@
 
 {is.reece}{is.zach}{is.bee}{is.chim}{is.mike}{is.tony}{is.peyton}
 
+
+
 {=(inReeceScheme):{if({contains({reece.scheme}):{user(roleids)}}==true): In Reece's Scheme|}}
 {=(inZachScheme):{if({contains({zach.scheme}):{user(roleids)}}==true): In Zach's Scheme|}}
 {=(inBeeScheme):{if({contains({bee.scheme}):{user(roleids)}}==true): In Bee's Scheme|}}
@@ -41,3 +45,25 @@
 {=(inPeytonScheme):{if({contains({peyton.scheme}):{user(roleids)}}==true): In Peyton's Scheme|}}
 
 User is: {inReeceScheme} {inZachScheme} {inBeeScheme} {inChimScheme} {inMikeScheme} {inTonyScheme} {inPeytonScheme}
+
+
+~~ New Stuff ~~
+
+{=(u2):{2}}
+
+{=(inReeceScheme):{if({contains({reece.scheme}):{user(roleids)}}==true): In Reece's Scheme|}}
+{=(inZachScheme):{if({contains({zach.scheme}):{user(roleids)}}==true): In Zach's Scheme|}}
+{=(inBeeScheme):{if({contains({bee.scheme}):{user(roleids)}}==true): In Bee's Scheme|}}
+{=(inChimScheme):{if({contains({chim.scheme}):{user(roleids)}}==true): In Chim's Scheme|}}
+{=(inMikeScheme):{if({contains({mike.scheme}):{user(roleids)}}==true): In Mike's Scheme|}}
+{=(inTonyScheme):{if({contains({tony.scheme}):{user(roleids)}}==true): In Tony's Scheme|}}
+{=(inPeytonScheme):{if({contains({peyton.scheme}):{user(roleids)}}==true): In Peyton's Scheme|}}
+
+{=(schemeRoleNumber):{inReeceScheme}{inZachScheme}{inBeeScheme}{inChimScheme}{inMikeScheme}{inTonyScheme}{inPeytonScheme}}
+
+SchemeRoleNumber: {schemeRoleNumber}
+
+{=(r6):{if({m:sgn({args(1)})}==1):{replace(, ):{args(1)}}}}
+{=(r6):{join():{r6(-6+)}}}
+
+r6: {r6}

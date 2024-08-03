@@ -16,8 +16,7 @@ This item CANNOT be played on another person during these sessions or transferre
 
 
 
-
-{if({m:{uses+2}}<{item_qtyAvailable}):
+{if({m:{uses}+0}<{m:{item_qtyAvailable}+0}):
 You have chosen {item_007name} as your {rank} promotion reward from Q branch!
 
 > {item_fullDescription}
