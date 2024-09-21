@@ -1,0 +1,4 @@
+{var(coordinate):b3}
+{=(c-upper):{upper:{coordinate}}}
+
+{"title":"You have arrived at coordinate {coordinate}","description":"Type **?{coordinate}-explore** in your **submission channel** to look around. ","image":{"url":"https://media.discordapp.net/attachments/1205174228555403284/1210236096860917771/B3.PNG?ex=65e9d332&is=65d75e32&hm=98994a52ec38e7ad415f5f23349067ad57606ab535f941d1c5aa9158bde7287e&=&format=webp&qualit"},"author":{"name":"Zeldavivor","icon_url":"https://cdn.discordapp.com/attachments/1205174228555403284/1205756728323346522/icon256.png?ex=65d98775&is=65c71275&hm=13e2b2d26bcb8c5e589e2c00ec189ce6112c453a2fc49454d07ef935fa067ee9&"},"color":8311585,"footer":{"icon_url":"https://cdn.discordapp.com/attachments/1205174228555403284/1205757772034220122/OldManTransparent.png?ex=65d9886e&is=65c7136e&hm=c154353b841662fff37125a8cc75f72f3b7e419a61b309338d56db345a8c4efe&","text":"🔥   It's dangerous to go alone! Take this! ⚔️  🔥"}}

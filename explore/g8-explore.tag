@@ -1,0 +1,3 @@
+{var(coordinate):g8}
+
+{"title":"**{upper:{coordinate}} |** *You are in a narrow, winding ravine*","description":"You find yourself in a small, winding, narrow passageway. Suddenly, a giant venus fly-trap like creature springs out of the ground.\n\nIt's just sitting there snapping and looks pretty weak - you think you can take it (**?{coordinate}-battle-dekubaba**).\n\nOn the other hand, you're pretty sure you can just dodge around it and make your way to the Great Deku Tree in the next coordinate (**?h8-navigate**).","author":{"name":"Zeldavivor","icon_url":"https://cdn.discordapp.com/attachments/1205174228555403284/1205756728323346522/icon256.png?ex=65d98775&is=65c71275&hm=13e2b2d26bcb8c5e589e2c00ec189ce6112c453a2fc49454d07ef935fa067ee9&"},"color":8311585}
